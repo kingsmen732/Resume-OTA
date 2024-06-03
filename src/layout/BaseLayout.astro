@@ -1,0 +1,28 @@
+---
+import "aos/dist/aos.css";
+import "@fontsource/poppins/100.css";
+import "@fontsource/poppins/200.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/900.css";
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>B.Mithilesh - My Portfolio</title>
+  </head>
+  <body>
+    <main class="base_layout">
+      <slot />
+    </main>
+  </body>
+  <script>
+    import { aosInit } from "../services/aos";
+    aosInit();
+  </script>
+</html>

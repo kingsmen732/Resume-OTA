@@ -1,0 +1,73 @@
+---
+import style from "../../styles/tecnologies.module.css";
+import TecnologiesCard from "../tecnologies-card/tecnologies-card.jsx";
+
+const iconsTech = [
+  {
+    id: 1,
+    title: "O.S",
+    icon: ["./icons/windows.svg", "./icons/ubuntu.ico"],
+  },
+  {
+    id: 2,
+    title: "Essentials",
+    icon: [
+      "./icons/html.svg",
+      "./icons/css.svg",
+      "./icons/js.svg",
+      "./icons/ts.svg",
+      "./icons/node.svg",
+      "./icons/git.svg",
+    ],
+  },
+  {
+    id: 3,
+    title: "Front Tools",
+    icon: [
+      "./icons/bootstrap.svg",
+      "./icons/figma.svg",
+      "./icons/framer.svg",
+      "./icons/tailwind.svg",
+    ],
+  },
+  {
+    id: 4,
+    title: "Libs & Frameworks",
+    icon: [
+      "./icons/angular.svg",
+      "./icons/react.svg",
+      "./icons/astro.svg",
+      "./icons/nextjs.svg",
+    ],
+  },
+];
+---
+
+<div id="container-tecnologies" class=`${style.container_tecnologies}`>
+  <div
+    id="container-description-tecnologies"
+    class=`${style.description_tecnologies}`
+  >
+    <h2 data-aos="fade-up" class=`${style.title} title`>Tech Stack</h2>
+    <p data-aos="fade-up" class=`${style.subtitle}`>
+      Some of the <span>Software and Tech </span> which <span>I use and study</span> in my day by day
+    </p>
+  </div>
+  <div
+    id="container-tecnologies-card"
+    class=`${style.container_tecnologies_card}`
+  >
+    {
+      iconsTech.map((tech) => {
+        return (
+          <TecnologiesCard
+            key={tech.id}
+            title={tech.title}
+            icons={tech.icon}
+            client:visible
+          />
+        );
+      })
+    }
+  </div>
+</div>

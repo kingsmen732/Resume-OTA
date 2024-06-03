@@ -1,0 +1,89 @@
+.container_certificates {
+  @apply grid grid-cols-1 xl:grid-cols-2 items-center lg:gap-5;
+}
+
+.container_description_certificates {
+  @apply flex flex-col items-center text-center xl:text-start;
+}
+
+.title {
+  font-weight: 700;
+  @apply text-4xl xl:text-5xl 2xl:text-6xl mb-4;
+}
+
+.subtitle {
+  font-style: italic;
+  color: var(--color-blue-dark);
+}
+
+.container_img_certificates {
+  @apply relative w-52 h-52 md:w-64 md:h-64 lg:w-96 lg:h-96 my-16 lg:my-5;
+}
+
+.container_img_certificates img {
+  position: absolute;
+  box-shadow: 2px 2px 3px 0 rgb(0, 0, 0, 0.15);
+}
+
+/*Não posso utilizar o nth:child para 
+mudar posições absolutas com as imgs, 
+utilizar classes separadas*/
+
+.img_first {
+  @apply top-[0] left-[-25%];
+}
+
+.img_second {
+  @apply top-[10%] left-[-15%];
+}
+
+.img_third {
+  @apply top-[20%] left-[0%];
+}
+
+.img_fourth {
+  @apply top-[30%] left-[10%];
+}
+
+.img_fifth {
+  @apply top-[40%] left-[25%];
+}
+
+.img_sixth {
+  @apply top-[50%] left-[50%];
+}
+
+.img_seventh {
+  @apply top-[60%] left-[60%];
+}
+
+.img_first:hover,
+.img_second:hover,
+.img_third:hover,
+.img_fourth:hover,
+.img_fifth:hover,
+.img_sixth:hover,
+.img_seventh:hover {
+  cursor: pointer;
+  transform: scale(1.3) !important;
+  z-index: 100;
+}
+
+.container_descript_certificates {
+  @apply text-end;
+}
+
+.title_certificates_descript {
+  font-weight: 700;
+  color: var(--color-blue-dark);
+  @apply text-2xl md:text-3xl lg:text-4xl pl-10;
+}
+
+.name_certificates_descript {
+  font-weight: 680;
+  @apply text-lg;
+}
+
+.date_certificates_descript {
+  @apply italic font-light;
+}

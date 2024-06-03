@@ -1,0 +1,41 @@
+---
+import "@fontsource/poppins/700.css";
+import AboutImage from "../about-image/about-image.astro";
+import Button from "../button/button.astro";
+import style from "../../styles/about.module.css";
+import Popup from "../popup/popup.astro";
+const linkCurriculo =
+  "\CV -MITHILESH_compressed.pdf";
+---
+
+<div id="container-about" class=`${style.container_about}`>
+  <div id="container-descript-about" class=`${style.container_descript_about}`>
+    <h2 data-aos="fade-right" class="title">About me</h2>
+    <p data-aos="fade-right" class=`${style.descript}`>
+      Hello! My name is B.Mithilesh, I am <span class=`${style.bold_blue_s}`>R&D Engineer</span> 
+        <span class=`${style.bold_blue_h}`>AI ML enthusiast</span> IOT , ROBOTICS and PEN-Testing.
+         I have been dedicating myself to the  <span class=`${style.bold_blue_h}`
+        >world of programming</span> 
+        focusing on the Research and Development field of science,
+      <span class=`${style.bold_blue_s}`
+        >Deploying Homelabs and Servers </span
+      > Looking forward to learn and explore in this digital community. Open to <span
+        class=`${style.bold_blue_h}`>New challenges </span
+      >and follow in seeking a deeper knowledge to act in the <span class=`${style.bold_blue_s}`>future.</span>
+    </p>
+    <div id="container-btn-about" class=`${style.container_btn_about}`>
+      <a
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        class=`${style.btn_cv}`
+        href=`${linkCurriculo}`
+        target="_blank">My Resume</a
+      >
+      <Button />
+    </div>
+  </div>
+  <div id="container-img-about" class=`${style.container_image_about}`>
+    <AboutImage />
+  </div>
+  <Popup />
+</div>

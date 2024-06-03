@@ -1,0 +1,58 @@
+.container_home {
+  @apply flex items-center;
+}
+
+.container_text {
+  @apply py-16 xl:py-36;
+}
+
+.container_text h1 {
+  font-weight: 200;
+  @apply text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+}
+
+.container_text h2 {
+  color: var(--color-blue-dark);
+  font-weight: 900;
+  @apply text-4xl lg:text-6xl xl:text-6xl 2xl:text-7xl;
+}
+
+.container_text h2 span {
+  color: var(--color-blue-soft);
+}
+
+.social_list_icons {
+  @apply mt-5 xl:mt-10 flex justify-end;
+}
+
+li {
+  margin: 8px;
+}
+
+.icon {
+  @apply w-[42px] lg:w-[48px];
+  transition: 0.1s;
+}
+
+.icon:hover {
+  filter: invert(53%) sepia(100%) saturate(393%) hue-rotate(139deg)
+    brightness(97%) contrast(83%);
+}
+
+.container_arrow {
+  @apply flex justify-center relative;
+}
+
+.container_arrow img {
+  @apply absolute top-10;
+  animation: arrowFX 600ms ease-in-out infinite alternate-reverse;
+}
+
+@keyframes arrowFX {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(40%);
+  }
+}

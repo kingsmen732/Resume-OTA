@@ -1,0 +1,41 @@
+.container_footer {
+  @apply text-end py-10;
+}
+
+.title {
+  @apply text-2xl sm:text-3xl md:text-5xl xl:md:text-6xl 2xl:md:text-7xl font-extrabold;
+}
+
+.span_custom {
+  background-image: linear-gradient(
+    45deg,
+    var(--color-blue-dark),
+    var(--color-blue-soft)
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.container_footer span:first-child {
+  color: var(--color-blue-dark);
+}
+
+.container_footer span:last-child {
+  color: var(--color-blue-soft);
+}
+
+.container_scroll {
+  @apply flex justify-end;
+}
+
+.container_scroll img {
+  text-align: center;
+  @apply w-3 mr-2;
+}
+
+.container_scroll p {
+  @apply text-sm;
+}

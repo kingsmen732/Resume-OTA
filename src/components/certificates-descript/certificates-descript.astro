@@ -1,0 +1,10 @@
+---
+const { title, name, date } = Astro.props;
+import style from "../../styles/certificates.module.css";
+---
+
+<div data-aos="fade-right" class="my-8">
+  <h3 class=`${style.title_certificates_descript}`>{title}</h3>
+  <p class=`${style.name_certificates_descript}`>{name}</p>
+  <p class=`${style.date_certificates_descript}`>{date}</p>
+</div>

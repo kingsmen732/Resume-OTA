@@ -1,0 +1,51 @@
+---
+import ProjectsCard from "../projects-card/projects-card.jsx";
+import style from "../../styles/projects.module.css";
+
+/* API PUBLICA DO GITHUB */
+const user = await fetch("https://api.github.com/users/kingsmen732/repos", {
+  headers: { authorization: import.meta.env.API_TOKEN },
+});
+const userData = await user.json();
+
+
+const newArr = userData.filter((data) => {
+  if (!data.topics.includes("study-notes")) {
+    return data;
+  }
+});
+---
+
+<div id="container-projects" class="">
+  <div id="container-projects-title" class=`${style.container_projects_title}`>
+    <h2 data-aos="fade-up" class="title">My projects</h2>
+    <p data-aos="fade-up" class=`${style.subtitle}`>
+      This session contains some of my <span>personal</span> or <span
+        >professional </span>
+        performed during my  <span> apprenticeship/career </span> as a developer.
+      Use the "learn more" button to check in <span>my Github repository</span> (deploy in the repository)
+    </p>
+    <p data-aos="fade-up" class=`${style.attention}`>
+      Note: may contain ongoing projects
+    </p>
+  </div>
+  <div id="container-projects-card" class=`${style.container_projects_card}`>
+    {
+      newArr.map((data) => {
+        const img = `https://raw.githubusercontent.com/kingsmen732/${data.name}/${data.default_branch}/demo.png`;
+        return (
+          <ProjectsCard
+            title={data.name}
+            description={data.description}
+            url={data.html_url}
+            image={img}
+            client:visible
+          />
+        );
+      })
+    }
+  </div>
+  <div data-aos="fade-up" class=`${style.container_text_foot}`>
+    <p>Wait for more projects in the future...</p>
+  </div>
+</div>

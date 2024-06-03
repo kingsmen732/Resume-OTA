@@ -1,0 +1,16 @@
+---
+import style from "../../styles/popup.module.css";
+import AboutMeText from "../about-me-text/about-me-text.astro";
+---
+
+<dialog id="modal-about" class=`${style.container_about_popup}`>
+  <AboutMeText />
+  <div id="container-modal-button" class=`${style.container_modal_button}`>
+    <button data-close-btn>To close</button>
+  </div>
+</dialog>
+<script>
+  const closeButton = document.querySelector("[data-close-btn]");
+  const modal = document.getElementById("modal-about");
+  closeButton.addEventListener("click", () => modal.close());
+</script>

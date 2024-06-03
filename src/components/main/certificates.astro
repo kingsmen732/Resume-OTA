@@ -1,0 +1,55 @@
+---
+import CertificatesImages from "../certificates-images/certificates-images.astro";
+import CertificatesDescript from "../certificates-descript/certificates-descript.astro";
+import style from "../../styles/certificates.module.css";
+---
+
+<div id="container-certificates" class=`${style.container_certificates}`>
+  <div
+    id="container-description-certificates"
+    class=`${style.container_description_certificates}`
+  >
+    <div id="container-text-certificates">
+      <h2 data-aos="fade-up" class=`${style.title}`>Certificates</h2>
+      <p data-aos="fade-up" class=`${style.subtitle}`>
+        ““Every day a new step, a new challenge, a new learning””
+      </p>
+    </div>
+    <div
+      id="container-img-certificates"
+      class=`${style.container_img_certificates}`
+    >
+      <a
+        href="https://drive.google.com/drive/folders/1S4ZtZErGERbei-N70jd3FpQ_D7HDMNRv?usp=sharing"
+        target="_blank"
+      >
+        <CertificatesImages />
+      </a>
+    </div>
+  </div>
+  <div
+    id="container-descript-certificates"
+    class=`${style.container_descript_certificates}`
+  >
+    <CertificatesDescript
+      title="Python Developer Intern "
+      name="Octanet services"
+      date="Jan/2024 - Feb/2024"
+    />
+    <CertificatesDescript
+      title="Hack AP Hackathon"
+      name="A-HUB"
+      date="Firstplace - Finalist "
+    />
+    <CertificatesDescript
+      title="National Hackathon by VIT "
+      name="Electrical Department"
+      date="Firstplace - Finalist "
+    />
+    <div class="mt-10">
+      <p data-aos="fade-right" data-aos-delay="350" class="italic">
+        Looking forward to create new memories down this lane...
+      </p>
+    </div>
+  </div>
+</div>

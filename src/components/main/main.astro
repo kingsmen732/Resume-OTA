@@ -1,0 +1,70 @@
+---
+import style from "../../styles/main.module.css";
+
+const linkedinIcon = "./linkedin.svg";
+const githubIcon = "./github.svg";
+const mailIcon = "./mail.svg";
+const whatsappIcon = "./whatsapp.svg";
+---
+
+<div id="container-home" class=`${style.container_home}`>
+  <div id="container-description-home" class=`${style.container_text}`>
+    <h1 data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
+      Hello, I'm Mithilesh
+    </h1>
+    <h2 data-aos="flip-right" data-aos-delay="1000" data-aos-duration="2500">
+      Research and development Engineer      <span>        Computer Science</span>
+    </h2>
+    <div id="container-social-list-home" class=`${style.container_social_list}`>
+      <ul
+        id="social-list-icons"
+        data-aos="fade-left"
+        data-aos-delay="1800"
+        data-aos-duration="1800"
+        class=`${style.social_list_icons}`
+      >
+        <li>
+          <a href="https://www.linkedin.com/in/b-mithilesh-a8662b203" target="_blank"
+            ><img
+              class=`${style.icon}`
+              src={linkedinIcon}
+             
+            /></a>
+        </li>
+        <li>
+          <a href="https://github.com/kingsmen732" target="_blank"
+            ><img
+              class=`${style.icon}`
+              src={githubIcon}
+              
+            /></a>
+        </li>
+        <li>
+          <a href="mailto:B.Mithilesh@proton.me"
+            ><img
+              class=`${style.icon}`
+              src={mailIcon}
+              
+            /></a>
+        </li>
+        <li>
+          <a href="https://bento.me/kingsmen732" target="_blank"
+            ><img
+              class=`${style.icon}`
+              src={whatsappIcon}
+              
+            /></a>
+        </li>
+      </ul>
+    </div>
+    <div class=`${style.container_arrow}`>
+      <img
+        data-aos="fade-up"
+        data-aos-delay="1700"
+        src="arrowdown.svg"
+        class="w-3"
+        
+      />
+    </div>
+  </div>
+</div>
